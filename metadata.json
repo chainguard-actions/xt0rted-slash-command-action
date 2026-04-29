@@ -1,5 +1,6 @@
 {
   "owner": "xt0rted",
   "name": "slash-command-action",
-  "visibility": ""
+  "visibility": "internal",
+  "description": "A GitHub Action to check comments for slash commands"
 }
