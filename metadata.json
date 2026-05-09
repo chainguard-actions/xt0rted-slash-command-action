@@ -2,5 +2,6 @@
   "owner": "xt0rted",
   "name": "slash-command-action",
   "visibility": "internal",
-  "description": "A GitHub Action to check comments for slash commands"
+  "description": "A GitHub Action to check comments for slash commands",
+  "block_publish": false
 }
