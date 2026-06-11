@@ -1,6 +1,6 @@
 # xt0rted/slash-command-action
 
-A GitHub Action to check comments for slash commands
+Check comments for /commands
 
 Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/xt0rted/slash-command-action](https://github.com/xt0rted/slash-command-action).
 
