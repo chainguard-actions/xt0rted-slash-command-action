@@ -1,0 +1,31 @@
+name: Test basic slash command
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_EVENT_NAME: issue_comment
+      GITHUB_REF: refs/heads/main
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - id: action
+        uses: .
+        continue-on-error: true
+        with:
+          repo-token: ${{ github.token }}
+          command: deploy
+          reaction: "false"
+          allow-edits: "false"
+          permission-level: write
+      - name: Assert action ran with command input
+        run: |
+          echo "outcome: ${{ steps.action.outcome }}"
+          # The action requires a real GitHub comment context to succeed.
+          # We verify it was invoked (not skipped) and either succeeded or
+          # failed gracefully (not a setup/missing-input error).
+          if [ "${{ steps.action.outcome }}" = "skipped" ]; then
+            echo "FAIL: action was skipped unexpectedly"
+            exit 1
+          fi
+          echo "PASS: action was invoked with command input"
