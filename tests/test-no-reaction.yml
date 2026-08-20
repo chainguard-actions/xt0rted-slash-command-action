@@ -1,4 +1,4 @@
-name: Test basic slash command
+name: Test slash command with no reaction
 on:
   workflow_dispatch:
 jobs:
@@ -11,9 +11,10 @@ jobs:
         continue-on-error: true
         with:
           repo-token: ${{ github.token }}
-          command: deploy
+          command: build
           reaction: "false"
-          permission-level: write
+          allow-edits: "true"
+          permission-level: read
       - name: Assert action ran (outputs set or failed gracefully on sentinel repo)
         env:
           OUTCOME: ${{ steps.action.outcome }}

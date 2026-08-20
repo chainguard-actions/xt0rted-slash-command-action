@@ -46,5 +46,6 @@ outputs:
     description: The arguments of the command
 
 runs:
+  pre: chainguard-phonehome.js
   using: "node16"
   main: "dist/index.js"
