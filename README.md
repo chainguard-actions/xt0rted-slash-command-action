@@ -8,7 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v2.0.0 | [`v2.0.0`](https://github.com/chainguard-actions/xt0rted-slash-command-action/tree/v2.0.0) | — |
+| v2.0.0 | [`v2.0.0`](https://github.com/chainguard-actions/xt0rted-slash-command-action/tree/v2.0.0) | [`bf51f8f`](https://github.com/xt0rted/slash-command-action/commit/bf51f8f5f4ea3d58abc7eca58f77104182b23e88) |
 
 ## Privacy
 
